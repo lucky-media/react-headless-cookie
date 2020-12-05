@@ -23,7 +23,7 @@ const App = () => {
       <Space />
       <Space />
       <Space />
-      <Cookie>
+      <Cookie settings={{ name: 'luckymedia' }}>
         <Cookie.Body>This website is using cookies</Cookie.Body>
 
         <Cookie.Button>Accept</Cookie.Button>

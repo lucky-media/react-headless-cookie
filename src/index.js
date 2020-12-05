@@ -3,8 +3,9 @@ import CookieContext from './CookieContext'
 import Body from './components/Body'
 import Button from './components/Button'
 import Cookies from 'js-cookie'
+import PropTypes from 'prop-types'
 
-const Cookie = ({ children }) => {
+const Cookie = ({ children, settings }) => {
   const [hidden, setIsHidden] = useState(true)
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const Cookie = ({ children }) => {
   }, [])
 
   return (
-    <CookieContext.Provider value={{ setIsHidden, hidden }}>
+    <CookieContext.Provider value={{ setIsHidden, hidden, settings }}>
       <div
         style={{
           display: hidden ? 'none' : 'block',
@@ -35,5 +36,13 @@ const Cookie = ({ children }) => {
 
 Cookie.Body = Body
 Cookie.Button = Button
+
+Cookie.propTypes = {
+  children: PropTypes.node.isRequired,
+  settings: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    duration: PropTypes.number
+  })
+}
 
 export { Cookie }
