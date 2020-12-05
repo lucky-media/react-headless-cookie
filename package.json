@@ -1,7 +1,7 @@
 {
   "name": "react-headless-cookie",
   "version": "1.0.0",
-  "description": "This is a headless react cookie package, it comes unopinionated and unstyled",
+  "description": "This is a headless react cookie package, it comes unopinionated and without styling",
   "author": "lucky-media",
   "license": "MIT",
   "repository": "lucky-media/react-headless-cookie",
@@ -49,5 +49,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "js-cookie": "^2.2.1"
+  }
 }
