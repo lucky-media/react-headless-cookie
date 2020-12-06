@@ -1,5 +1,5 @@
 {
-  "name": "react-headless-cookie",
+  "name": "@lucky-media/react-headless-cookie",
   "version": "1.0.0",
   "description": "This is a headless react cookie package, it comes unopinionated and without styling",
   "author": "lucky-media",
