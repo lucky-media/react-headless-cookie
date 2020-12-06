@@ -53,6 +53,7 @@ const App = () => {
 
 ## Props for Cookie.Button
 | Prop | Type | Required | Description |
+|------|------|----------|-------------|
 | children | Node | yes | Accepts React Component / elements nodes to render |
 | style | Object | no | style object used for styling the button |
 | className | String | no | className string used for styling the button |
