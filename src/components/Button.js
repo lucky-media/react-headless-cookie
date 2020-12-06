@@ -3,21 +3,26 @@ import Cookies from 'js-cookie'
 import CookieContext from '../CookieContext'
 import PropTypes from 'prop-types'
 
-const Button = ({ children, className, style }) => {
+const Button = ({ children, className, style, as, ...props }) => {
   const { setIsHidden, settings } = React.useContext(CookieContext)
 
+  const { name, ...other } = settings
+
+  const Tag = as || 'button'
+
   const setCookie = () => {
-    Cookies.set('cookies', 'false', {
-      expires: 180
+    Cookies.set(name, 'false', {
+      expires: 180,
+      ...other
     })
 
     setIsHidden(true)
   }
 
   return (
-    <button onClick={setCookie} className={className} style={style}>
+    <Tag {...props} onClick={setCookie} className={className} style={style}>
       {children}
-    </button>
+    </Tag>
   )
 }
 

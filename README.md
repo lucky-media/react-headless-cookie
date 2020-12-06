@@ -13,15 +13,24 @@ npm install --save react-headless-cookie
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { Cookie } from 'react-headless-cookie'
 
-import MyComponent from 'react-headless-cookie'
-import 'react-headless-cookie/dist/index.css'
+const styles = {
+  width: '100%',
+  backgroundColor: '#000',
+  color: 'white',
+  bottom: '0px',
+  padding: '1rem'
+}
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <Cookie style={styles} settings={{ name: 'cookie' }}>
+      <div>This website is using cookies</div>
+      <Cookie.Button>Accept</Cookie.Button>
+    </Cookie>
+  )
 }
 ```
 
