@@ -59,6 +59,10 @@ const App = () => {
 | className | String | no | className string used for styling the button |
 | as | String | no | Tag on how to render the button, defaults to `button` |
 
+## Examples
+Checkout these examples we built with Tailwind CSS on how to use the plugin
+- [First Example](https://codesandbox.io/s/react-headless-cookie-example-1-22gx6?file=/src/App.js)
+
 ## License
 
 MIT © [lucky-media](https://github.com/lucky-media)
