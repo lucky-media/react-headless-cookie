@@ -1,20 +1,26 @@
-# react-headless-cookie
+# @lucky-media/react-headless-cookie
 
-> This is a headless react cookie package, it comes unopinionated and unstyled
+![OG](https://user-images.githubusercontent.com/11158157/101268468-70482b80-3763-11eb-8145-74eae4093374.jpg)
 
-[![NPM](https://img.shields.io/npm/v/react-headless-cookie.svg)](https://www.npmjs.com/package/react-headless-cookie) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@lucky-media/react-headless-cookie.svg)](https://www.npmjs.com/package/@lucky-media/react-headless-cookie) ![Minified Size](https://img.shields.io/bundlephobia/min/@lucky-media/react-headless-cookie) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![license-mit](https://img.shields.io/badge/license-MIT-green)
+
+This is a headless react cookie package, it comes unopinionated and unstyled. The main purpose we built this package is to allow us configurability while still maintain the Cookie set/hide logic.
+
+The `<Cookie>` component accepts a `<Cookie.Button>` component which sets the cookie with the name on settings prop. See below for prop reference.
+
+This package wraps the popular [js-cookie](https://github.com/js-cookie/js-cookie).
 
 ## Install
 
 ```bash
-npm install --save react-headless-cookie
+npm i @lucky-media/react-headless-cookie
 ```
 
 ## Usage
 
 ```jsx
 import React from 'react'
-import { Cookie } from 'react-headless-cookie'
+import { Cookie } from '@lucky-media/react-headless-cookie'
 
 const styles = {
   width: '100%',
@@ -33,6 +39,24 @@ const App = () => {
   )
 }
 ```
+
+## Props for Cookie component
+| Prop              | Type   | Required | Description                                                                                                                |
+|-------------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------|
+| children          | Node   |    yes   | Accepts React Component nodes / elements to render                                                                                    |
+| style             | Object |    no    | Style object used for styling the main container of Cookie, has a default value for position, zIndex and display.          |
+| className         | String |    no    | className string used for styling the main container of Cookie.                                                            |
+| delay             | Number |    no    | Add a delay before showing the popup. Defaults to 2000ms.                                                                  |
+| settings          | Object |    yes   | Cookie settings, accepts name (string) and duration (number). More settings can be added check the js-cookie documentation |
+| settings.name     | String |    yes   | Cookie name                                                                                                                |
+| settings.duration | Number |    no    | Cookie duration in days, defaults to 180.                                                                                  |
+
+## Props for Cookie.Button
+| Prop | Type | Required | Description |
+| children | Node | yes | Accepts React Component / elements nodes to render |
+| style | Object | no | style object used for styling the button |
+| className | String | no | className string used for styling the button |
+| as | String | no | Tag on how to render the button, defaults to `button` |
 
 ## License
 
