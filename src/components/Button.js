@@ -20,7 +20,7 @@ const Button = ({ children, className, style, as, ...props }) => {
   }
 
   return (
-    <Tag {...props} onClick={setCookie} className={className} style={style}>
+    <Tag aria-label="close-button" {...props} onClick={setCookie} className={className} style={style}>
       {children}
     </Tag>
   )
